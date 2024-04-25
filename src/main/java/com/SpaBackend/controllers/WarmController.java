@@ -21,10 +21,7 @@ public class WarmController {
     public WarmController(WarmService warmService) {
         this.warmService = warmService;
     }
-    @GetMapping
-    public String getIndex() {
-        return "hello warm";
-    }
+  
     @GetMapping("/warmbooking")
     public List <WarmBooking> getAllWarmBookings() {
         return warmService.getAllWarmBookings();
